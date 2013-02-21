@@ -5,11 +5,12 @@
 #Description: Displaying patterns
 
 def display_pattern(n):
-    length_n=len(str(n))-1
-    length_i=0
+    length_n=len(str(n))
     for i in range(1,n+1):
-        length_i+=len(str(i))-1
-        print(" "*(length_n-length_i+2*n-2*i),end="")
+        length_i=len(str(i))
+        for l in range(length_n):
+            print(" "*(l*(n-i)),end="")
         for j in range(i,0,-1):
             print(j,end=" ")
         print()
+display_pattern(13)

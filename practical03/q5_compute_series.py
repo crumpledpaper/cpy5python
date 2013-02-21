@@ -5,10 +5,11 @@
 #Description: Computing series
 
 def m_series(i):
-    s=4
+    s=0
+    print("i    m(i)")
     for n in range(1,2*i+2,2):
         if n%4==1:
-            s-=1/n
-        else:
             s+=1/n
-        print("{0:<5}{1}".format(n,s))
+        else:
+            s-=1/n
+            print("{0:<5}{1}".format(int((n-1)/2),s*4))
