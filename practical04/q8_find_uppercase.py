@@ -11,3 +11,5 @@ def find_num_uppercase(str):
         return 1 + find_num_uppercase(str[1:])
     else:
         return find_num_uppercase(str[1:])
+
+print(find_num_uppercase(" HelloWorLd"))
